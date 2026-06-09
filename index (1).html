@@ -1,0 +1,647 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vara Prakash Thota — Software Engineer</title>
+    <meta name="description" content="Software Engineer with 2.5 years at TCS building data-driven platforms — sentiment analytics, REST APIs, and AI-integrated full-stack products." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.0.0/dist/tabler-icons.min.css" />
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      :root {
+        --ink: #1a1a1a;
+        --ink2: #555;
+        --ink3: #888;
+        --surface: #fff;
+        --surface2: #f7f6f3;
+        --surface3: #f0efe9;
+        --accent: #1d9e75;
+        --accent2: #0f6e56;
+        --accent-light: #e1f5ee;
+        --border: rgba(0, 0, 0, 0.1);
+      }
+
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --ink: #f0efe9;
+          --ink2: #b4b2a9;
+          --ink3: #888780;
+          --surface: #111110;
+          --surface2: #1c1c1a;
+          --surface3: #242420;
+          --accent: #5dcaa5;
+          --accent2: #9fe1cb;
+          --accent-light: #04342c;
+          --border: rgba(255, 255, 255, 0.1);
+        }
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family:
+          "Inter",
+          -apple-system,
+          BlinkMacSystemFont,
+          sans-serif;
+        color: var(--ink);
+        background: var(--surface);
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      a {
+        color: var(--accent);
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+
+      /* NAV */
+      nav {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        background: var(--surface);
+        border-bottom: 0.5px solid var(--border);
+        padding: 0 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 52px;
+      }
+      .nav-logo {
+        font-weight: 500;
+        font-size: 15px;
+        color: var(--ink);
+      }
+      .nav-logo span {
+        color: var(--accent);
+      }
+      .nav-links {
+        display: flex;
+        gap: 24px;
+      }
+      .nav-links a {
+        font-size: 13px;
+        color: var(--ink2);
+      }
+      .nav-links a:hover {
+        color: var(--accent);
+        text-decoration: none;
+      }
+
+      /* HERO */
+      .hero {
+        padding: 5rem 2rem 4rem;
+        text-align: center;
+        border-bottom: 0.5px solid var(--border);
+        max-width: 860px;
+        margin: 0 auto;
+      }
+      .hero-tag {
+        font-size: 11px;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--ink3);
+        margin-bottom: 1.25rem;
+      }
+      .hero-name {
+        font-size: clamp(2.8rem, 8vw, 5rem);
+        font-weight: 500;
+        line-height: 1;
+        letter-spacing: -0.04em;
+        color: var(--ink);
+      }
+      .hero-name span {
+        color: var(--accent);
+      }
+      .hero-role {
+        margin-top: 1.25rem;
+        font-size: 1rem;
+        color: var(--ink2);
+        font-weight: 400;
+        letter-spacing: 0.02em;
+      }
+      .hero-links {
+        margin-top: 1.75rem;
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      .hero-links a {
+        font-size: 13px;
+        padding: 7px 16px;
+        border: 0.5px solid var(--border);
+        border-radius: 20px;
+        color: var(--ink2);
+        background: var(--surface2);
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        transition:
+          border-color 0.15s,
+          color 0.15s;
+      }
+      .hero-links a:hover {
+        border-color: var(--accent);
+        color: var(--accent);
+        text-decoration: none;
+      }
+      .hero-links a i {
+        font-size: 14px;
+      }
+
+      /* STATS */
+      .stats {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        border-bottom: 0.5px solid var(--border);
+        max-width: 860px;
+        margin: 0 auto;
+      }
+      .stat {
+        padding: 2.5rem 1.5rem;
+        text-align: center;
+        border-right: 0.5px solid var(--border);
+      }
+      .stat:last-child {
+        border-right: none;
+      }
+      .stat-num {
+        font-size: 2.2rem;
+        font-weight: 500;
+        color: var(--ink);
+        letter-spacing: -0.04em;
+      }
+      .stat-num span {
+        color: var(--accent);
+      }
+      .stat-label {
+        font-size: 12px;
+        color: var(--ink3);
+        margin-top: 5px;
+        letter-spacing: 0.04em;
+      }
+
+      /* SECTION */
+      .section {
+        padding: 3.5rem 2rem;
+        border-bottom: 0.5px solid var(--border);
+        max-width: 860px;
+        margin: 0 auto;
+      }
+      .section-eyebrow {
+        font-size: 11px;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--accent);
+        margin-bottom: 1.5rem;
+        font-weight: 500;
+      }
+
+      /* SKILLS */
+      .skills-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+        gap: 8px;
+      }
+      .skill-chip {
+        background: var(--surface2);
+        border: 0.5px solid var(--border);
+        border-radius: 8px;
+        padding: 9px 14px;
+        font-size: 13px;
+        color: var(--ink2);
+      }
+      .skill-chip.primary {
+        background: var(--accent-light);
+        border-color: var(--accent);
+        color: var(--accent2);
+      }
+
+      /* EXPERIENCE */
+      .exp-item {
+        margin-bottom: 3rem;
+      }
+      .exp-item:last-child {
+        margin-bottom: 0;
+      }
+      .exp-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-bottom: 4px;
+      }
+      .exp-company {
+        font-weight: 500;
+        font-size: 1rem;
+      }
+      .exp-period {
+        font-size: 12px;
+        color: var(--ink3);
+        background: var(--surface2);
+        padding: 4px 12px;
+        border-radius: 20px;
+        border: 0.5px solid var(--border);
+      }
+      .exp-role {
+        font-size: 13px;
+        color: var(--accent);
+        margin-bottom: 1rem;
+        font-weight: 500;
+        letter-spacing: 0.02em;
+      }
+      .exp-bullets {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      .exp-bullets li {
+        font-size: 14px;
+        color: var(--ink2);
+        line-height: 1.65;
+        padding-left: 1.3rem;
+        position: relative;
+      }
+      .exp-bullets li::before {
+        content: "→";
+        position: absolute;
+        left: 0;
+        color: var(--accent);
+        font-size: 12px;
+        top: 4px;
+      }
+      .exp-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 12px;
+        color: var(--accent);
+        margin-top: 12px;
+        border: 0.5px solid var(--accent);
+        padding: 5px 12px;
+        border-radius: 20px;
+        transition: background 0.15s;
+      }
+      .exp-link:hover {
+        background: var(--accent-light);
+        text-decoration: none;
+      }
+
+      /* PROJECTS */
+      .project-card {
+        background: var(--surface2);
+        border: 0.5px solid var(--border);
+        border-radius: 12px;
+        padding: 1.5rem 1.5rem 1.5rem 1.75rem;
+        margin-bottom: 1rem;
+        position: relative;
+        overflow: hidden;
+      }
+      .project-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 3px;
+        height: 100%;
+        background: var(--accent);
+      }
+      .project-title {
+        font-weight: 500;
+        font-size: 1rem;
+        margin-bottom: 8px;
+      }
+      .project-desc {
+        font-size: 13px;
+        color: var(--ink2);
+        line-height: 1.7;
+        margin-bottom: 14px;
+      }
+      .project-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+      }
+      .tag {
+        font-size: 11px;
+        background: var(--surface3);
+        color: var(--ink3);
+        padding: 3px 9px;
+        border-radius: 4px;
+        border: 0.5px solid var(--border);
+      }
+
+      /* CERTS */
+      .cert-list {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      .cert-item {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        padding: 12px 16px;
+        background: var(--surface2);
+        border-radius: 8px;
+        border: 0.5px solid var(--border);
+      }
+      .cert-icon {
+        color: var(--accent);
+        font-size: 20px;
+        flex-shrink: 0;
+      }
+      .cert-name {
+        font-size: 14px;
+        font-weight: 500;
+        color: var(--ink);
+      }
+      .cert-meta {
+        font-size: 12px;
+        color: var(--ink3);
+        margin-top: 2px;
+      }
+
+      /* EDUCATION */
+      .edu-list {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+      }
+      .edu-item {
+        border-left: 2px solid var(--accent);
+        padding-left: 16px;
+      }
+      .edu-degree {
+        font-size: 14px;
+        font-weight: 500;
+      }
+      .edu-school {
+        font-size: 13px;
+        color: var(--ink2);
+        margin-top: 2px;
+      }
+      .edu-year {
+        font-size: 12px;
+        color: var(--ink3);
+        margin-top: 2px;
+      }
+
+      /* CONTACT */
+      .contact-bar {
+        padding: 4rem 2rem;
+        text-align: center;
+        background: var(--surface2);
+      }
+      .contact-bar p {
+        font-size: 1.25rem;
+        font-weight: 500;
+        margin-bottom: 1.5rem;
+      }
+      .contact-links {
+        display: flex;
+        gap: 12px;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      .contact-links a {
+        font-size: 13px;
+        padding: 10px 18px;
+        background: var(--surface);
+        border: 0.5px solid var(--border);
+        border-radius: 8px;
+        color: var(--ink2);
+        display: flex;
+        align-items: center;
+        gap: 7px;
+        transition:
+          border-color 0.15s,
+          color 0.15s;
+      }
+      .contact-links a:hover {
+        border-color: var(--accent);
+        color: var(--accent);
+        text-decoration: none;
+      }
+
+      /* FOOTER */
+      footer {
+        text-align: center;
+        padding: 1.5rem;
+        font-size: 12px;
+        color: var(--ink3);
+        border-top: 0.5px solid var(--border);
+      }
+
+      /* RESPONSIVE */
+      @media (max-width: 600px) {
+        nav {
+          padding: 0 1.25rem;
+        }
+        .nav-links {
+          gap: 14px;
+        }
+        .hero {
+          padding: 3rem 1.25rem 2.5rem;
+        }
+        .stats {
+          grid-template-columns: 1fr;
+        }
+        .stat {
+          border-right: none;
+          border-bottom: 0.5px solid var(--border);
+        }
+        .stat:last-child {
+          border-bottom: none;
+        }
+        .section {
+          padding: 2.5rem 1.25rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="nav-logo">VP<span>.</span></div>
+      <div class="nav-links">
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+
+    <div class="hero">
+      <div class="hero-tag">Software Engineer · AI Integrations</div>
+      <div class="hero-name">Vara<span>.</span><br />Prakash<span>.</span></div>
+      <div class="hero-role">Python · Flask · Next.js · N8N · PostgreSQL · Claude</div>
+      <div class="hero-links">
+        <a href="https://www.linkedin.com/in/vara-prakash-5a6b611b3" target="_blank" rel="noopener"> <i class="ti ti-brand-linkedin" aria-hidden="true"></i>LinkedIn </a>
+        <a href="https://github.com/VarPrakash" target="_blank" rel="noopener"> <i class="ti ti-brand-github" aria-hidden="true"></i>GitHub </a>
+        <a href="mailto:varaprakashtvp@gmail.com"> <i class="ti ti-mail" aria-hidden="true"></i>varaprakashtvp@gmail.com </a>
+        <a href="tel:+919491821469"> <i class="ti ti-phone" aria-hidden="true"></i>+91 94918 21469 </a>
+      </div>
+    </div>
+
+    <div class="stats">
+      <div class="stat">
+        <div class="stat-num">2.5<span>yrs</span></div>
+        <div class="stat-label">Industry experience</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">~<span>25%</span></div>
+        <div class="stat-label">SLA breaches cut</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">~<span>40%</span></div>
+        <div class="stat-label">Duplicate records reduced</div>
+      </div>
+    </div>
+
+    <div class="section" id="skills">
+      <div class="section-eyebrow">Skills</div>
+      <div class="skills-grid">
+        <div class="skill-chip primary">Python</div>
+        <div class="skill-chip primary">Flask</div>
+        <div class="skill-chip primary">Next.js</div>
+        <div class="skill-chip primary">PostgreSQL</div>
+        <div class="skill-chip primary">N8N</div>
+        <div class="skill-chip">JavaScript</div>
+        <div class="skill-chip">React</div>
+        <div class="skill-chip">Node.js</div>
+        <div class="skill-chip">REST APIs</div>
+        <div class="skill-chip">SQL</div>
+        <div class="skill-chip">Claude Code</div>
+        <div class="skill-chip">Prompt Engineering</div>
+        <div class="skill-chip">Vercel</div>
+        <div class="skill-chip">GitHub</div>
+        <div class="skill-chip">Event Automation</div>
+      </div>
+    </div>
+
+    <div class="section" id="experience">
+      <div class="section-eyebrow">Experience</div>
+
+      <div class="exp-item">
+        <div class="exp-header">
+          <div class="exp-company">Tata Consultancy Services — Hyderabad</div>
+          <div class="exp-period">Dec 2021 – Jun 2024</div>
+        </div>
+        <div class="exp-role">Assistant System Engineer</div>
+        <ul class="exp-bullets">
+          <li>Built a sentiment analysis platform in Python &amp; Flask classifying customer emails, chat logs, and tickets as positive, negative, or urgent — cutting average escalation response time from 4 hrs to ~2.6 hrs.</li>
+          <li>Automated alert workflows via email &amp; Slack triggered by configurable sentiment thresholds, reducing SLA breach incidents by ~25%.</li>
+          <li>Designed REST APIs for data ingestion and report generation backed by PostgreSQL; built a JavaScript dashboard for live sentiment monitoring across support channels.</li>
+          <li>Engineered a data quality validation tool processing CSV uploads with format checks, required field validation, and referential integrity — with field-level error reporting.</li>
+          <li>Built a fuzzy-matching duplicate detection engine that cut near-duplicate customer records by ~40% across entries.</li>
+          <li>Persisted validated records in PostgreSQL with full audit trails; adopted across 5+ internal pipelines, significantly reducing manual data review effort.</li>
+        </ul>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-header">
+          <div class="exp-company">Independent Developer</div>
+          <div class="exp-period">Aug 2024 – Present</div>
+        </div>
+        <div class="exp-role">Full-Stack AI Products</div>
+        <ul class="exp-bullets">
+          <li>Building and shipping AI-integrated products using Next.js, N8N, and Claude — focused on full-stack delivery from architecture to deployment.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="section" id="projects">
+      <div class="section-eyebrow">Projects</div>
+      <div class="project-card">
+        <div class="project-title">AI-Powered Restaurant Website with Chatbot &amp; Reservation System</div>
+        <div class="project-desc">Full-stack restaurant site built on Next.js (deployed on Vercel) with an AI chatbot via N8N and OpenRouter API for natural language menu queries and automated table reservations. Engineered a REST API webhook layer keeping all reservation processing server-side. Custom image pipeline reduced asset size by over 85%. Used a Claude Code sub-agent architecture with design tokens to enforce UI consistency across all pages.</div>
+        <div class="project-tags">
+          <span class="tag">Next.js</span>
+          <span class="tag">N8N</span>
+          <span class="tag">OpenRouter API</span>
+          <span class="tag">REST API</span>
+          <span class="tag">Vercel</span>
+          <span class="tag">Claude Code</span>
+        </div>
+        <a class="exp-link" href="https://github.com/VarPrakash/divinekitchenn" target="_blank" rel="noopener"> <i class="ti ti-brand-github" aria-hidden="true"></i> View on GitHub </a>
+      </div>
+    </div>
+
+    <div class="section" id="certifications">
+      <div class="section-eyebrow">Certifications</div>
+      <div class="cert-list">
+        <div class="cert-item">
+          <i class="ti ti-certificate cert-icon" aria-hidden="true"></i>
+          <div>
+            <div class="cert-name">React and Node.js Certification</div>
+            <div class="cert-meta">Udemy · December 2022</div>
+          </div>
+        </div>
+        <div class="cert-item">
+          <i class="ti ti-certificate cert-icon" aria-hidden="true"></i>
+          <div>
+            <div class="cert-name">Python — Programming for Everybody</div>
+            <div class="cert-meta">Coursera · July 2021</div>
+          </div>
+        </div>
+        <div class="cert-item">
+          <i class="ti ti-certificate cert-icon" aria-hidden="true"></i>
+          <div>
+            <div class="cert-name">IoT Design</div>
+            <div class="cert-meta">APSSDC · August 2019</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section" id="education">
+      <div class="section-eyebrow">Education</div>
+      <div class="edu-list">
+        <div class="edu-item">
+          <div class="edu-degree">B.Tech — Electronics and Communication Engineering</div>
+          <div class="edu-school">PVP Siddhartha Institute of Technology, Vijayawada</div>
+          <div class="edu-year">July 2021</div>
+        </div>
+        <div class="edu-item">
+          <div class="edu-degree">Intermediate</div>
+          <div class="edu-school">Narayana Junior College, Vijayawada</div>
+          <div class="edu-year">April 2017</div>
+        </div>
+        <div class="edu-item">
+          <div class="edu-degree">SSC</div>
+          <div class="edu-school">Sunflower High School, Challapalli</div>
+          <div class="edu-year">April 2015</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-bar" id="contact">
+      <p>Let's build something together.</p>
+      <div class="contact-links">
+        <a href="mailto:varaprakashtvp@gmail.com"> <i class="ti ti-mail" aria-hidden="true"></i>varaprakashtvp@gmail.com </a>
+        <a href="https://www.linkedin.com/in/vara-prakash-5a6b611b3" target="_blank" rel="noopener"> <i class="ti ti-brand-linkedin" aria-hidden="true"></i>LinkedIn </a>
+        <a href="https://github.com/VarPrakash" target="_blank" rel="noopener"> <i class="ti ti-brand-github" aria-hidden="true"></i>GitHub </a>
+      </div>
+    </div>
+
+    <footer>© 2026 Vara Prakash Thota</footer>
+  </body>
+</html>
